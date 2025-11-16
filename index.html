@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Citas Médicas</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Sistema de Gestión de Citas Médicas</h1>
+        <p class="mb-0">Clínica Americana</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#acerca">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        
+        <div class="row">
+            <div class="col-12">
+                <div class="card shadow-lg mb-4">
+                    <div class="card-body text-center">
+                        <h2 class="card-title">Bienvenido al Sistema de Citas</h2>
+                        <p class="card-text">
+                            Gestiona tus citas médicas de forma rápida y eficiente. 
+                            Nuestro sistema te permite agendar, consultar y administrar todas tus citas en un solo lugar.
+                        </p>
+                        <button class="btn btn-primary" id="btnAlerta">Ver Información</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-12">
+                <h3 class="text-center mb-4">Nuestras Instalaciones</h3>
+                <div id="carouselEjemplo" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselEjemplo" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#carouselEjemplo" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselEjemplo" data-bs-slide-to="2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/sala_espera.webp" class="d-block w-100" alt="Sala de espera">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Sala de Espera</h5>
+                                <p>Espacios cómodos y modernos</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/consultorio.webp" class="d-block w-100" alt="Consultorio">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Consultorios</h5>
+                                <p>Equipamiento de última tecnología</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/personal_medico.webp" class="d-block w-100" alt="Personal médico">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Personal Médico</h5>
+                                <p>Profesionales altamente calificados</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselEjemplo" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselEjemplo" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card shadow mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h4>Agendar Nueva Cita</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="formCita">
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Nombre Completo</label>
+                                    <input type="text" class="form-control" id="nombre" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Teléfono</label>
+                                    <input type="tel" class="form-control" id="telefono" required>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <label class="form-label">Fecha</label>
+                                    <input type="date" class="form-control" id="fecha" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Hora</label>
+                                    <input type="time" class="form-control" id="hora" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Doctor</label>
+                                    <select class="form-select" id="doctor" required>
+                                        <option value="">Seleccionar...</option>
+                                        <option value="Dr. García">Dr. García</option>
+                                        <option value="Dra. Martínez">Dra. Martínez</option>
+                                        <option value="Dr. López">Dr. López</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-success w-100">Agendar Cita</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card shadow">
+                    <div class="card-header bg-dark text-white">
+                        <h4>Lista de Citas Agendadas</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover">
+                                <thead class="table-primary">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Paciente</th>
+                                        <th>Teléfono</th>
+                                        <th>Doctor</th>
+                                        <th>Fecha</th>
+                                        <th>Hora</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tablaCitas">
+                                    <tr>
+                                        <td colspan="7" class="text-center text-muted">No hay citas registradas</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">Desarrollado por: <strong>Lisandro Meza</strong></p>
+        <p class="mb-0">Fecha: <strong id="fechaActual"></strong></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="app.js"></script>
+
+</body>
+</html>
