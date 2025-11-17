@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de - Clínica Americana</title>
+    <link rel="icon" href="img/logo.webp" type="image/webp">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="bg-primary text-white text-center py-4">
+        <img src="img/logo.webp" alt="Logo Clínica" width="90">
+        <h1>Acerca de Nosotros</h1>
+        <span class="navbar-brand mb-0 h1">Clínica Americana</span>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">🩺</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="acerca.html">Acerca de</a></li>
+                </ul>
+            </div>
+            <div>
+                <button id="btnModoOscuro" class="btn btn-outline-dark btn-darkmode">
+                    🌙
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        
+        <div class="row">
+            <div class="col-12">
+                <div class="card shadow-lg mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title text-center">Nuestra Historia</h2>
+                        <p class="card-text text-center lead">
+                            Más de 25 años cuidando la salud de nuestra comunidad
+                        </p>
+                        <hr>
+                        <p>
+                            Clínica Americana fue fundada en 1998 con la visión de brindar servicios médicos 
+                            de excelencia y accesibles para toda la comunidad. Desde nuestros inicios, nos hemos 
+                            comprometido con la calidad, la innovación y el trato humano a nuestros pacientes.
+                        </p>
+                        <p>
+                            A lo largo de estos años, hemos crecido constantemente, incorporando tecnología de 
+                            punta y ampliando nuestros servicios para convertirnos en uno de los centros médicos 
+                            más completos y confiables de la región.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-4">
+            <div class="col-md-6">
+                <div class="card shadow h-100">
+                    <div class="card-header bg-primary text-white">
+                        <h4>🎯 Misión</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Proporcionar servicios médicos integrales de la más alta calidad, con un enfoque 
+                            humanizado y personalizado, utilizando tecnología avanzada y contando con un equipo 
+                            de profesionales altamente capacitados para garantizar el bienestar y la satisfacción 
+                            de nuestros pacientes y sus familias.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card shadow h-100">
+                    <div class="card-header bg-dark text-white">
+                        <h4>👁️ Visión</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Ser reconocidos como la clínica líder en atención médica de la región, destacando 
+                            por nuestra excelencia en el servicio, innovación constante, responsabilidad social 
+                            y compromiso con la salud de la comunidad, siendo referente nacional en calidad y 
+                            calidez humana.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">Desarrollado por: <strong>Lisandro Meza</strong></p>
+        <p class="mb-0">Fecha: <strong id="fechaActual"></strong></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let modoOscuro = localStorage.getItem('modoOscuro') === 'true';
+        const btnModoOscuro = document.getElementById('btnModoOscuro');
+        const fechaActual = document.getElementById('fechaActual');
+
+        function mostrarFechaActual() {
+            const hoy = new Date();
+            const opciones = { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            };
+            fechaActual.textContent = hoy.toLocaleDateString('es-ES', opciones);
+        }
+
+        function aplicarModoOscuro() {
+            if (modoOscuro) {
+                document.body.classList.add('dark-mode');
+                btnModoOscuro.textContent = '☀️';
+            } else {
+                document.body.classList.remove('dark-mode');
+                btnModoOscuro.textContent = '🌙';
+            }
+        }
+
+        btnModoOscuro.addEventListener('click', function() {
+            modoOscuro = !modoOscuro;
+            localStorage.setItem('modoOscuro', modoOscuro);
+            aplicarModoOscuro();
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            mostrarFechaActual();
+            aplicarModoOscuro();
+        });
+    </script>
+
+</body>
+</html>

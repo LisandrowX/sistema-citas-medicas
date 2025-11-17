@@ -2,6 +2,7 @@ let citas = [];
 let contador = 1;
 
 const btnAlerta = document.getElementById('btnAlerta');
+const btnModoOscuro = document.getElementById('btnModoOscuro');
 const formCita = document.getElementById('formCita');
 const tablaCitas = document.getElementById('tablaCitas');
 const fechaActual = document.getElementById('fechaActual');

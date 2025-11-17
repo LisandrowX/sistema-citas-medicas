@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Clínica Americana</title>
+    <link rel="icon" href="img/logo.webp" type="image/webp">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="bg-primary text-white text-center py-4">
+        <img src="img/logo.webp" alt="Logo Clínica" width="90">
+        <h1>Contacto</h1>
+        <span class="navbar-brand mb-0 h1">Clínica Americana</span>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">🩺</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="acerca.html">Acerca de</a></li>
+                </ul>
+            </div>
+            <div>
+                <button id="btnModoOscuro" class="btn btn-outline-dark btn-darkmode">
+                    🌙
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        
+        <div class="row">
+            <div class="col-12">
+                <div class="card shadow-lg mb-4">
+                    <div class="card-body text-center">
+                        <h2 class="card-title">¿Necesitas Comunicarte con Nosotros?</h2>
+                        <p class="card-text">
+                            Estamos aquí para ayudarte. Contáctanos por cualquiera de nuestros canales 
+                            y te responderemos a la brevedad posible.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="card shadow h-100">
+                    <div class="card-header bg-primary text-white">
+                        <h4>Información de Contacto</h4>
+                    </div>
+                    <div class="card-body">
+                        
+                        <div class="contact-item mb-4">
+                            <h5>Dirección</h5>
+                            <p class="ms-4">
+                                Avenida Principal #123<br>
+                                Centro Médico Torre A, Piso 5<br>
+                                Ciudad, País CP 12345
+                            </p>
+                        </div>
+
+                        <div class="contact-item mb-4">
+                            <h5>Teléfonos</h5>
+                            <p class="ms-4">
+                                <strong>Recepción:</strong> +57 1234567010<br>
+                                <strong>Emergencias:</strong> +57 9116979020<br>
+                                <strong>WhatsApp:</strong> +57 9876543030
+                            </p>
+                        </div>
+
+                        <div class="contact-item mb-4">
+                            <h5>Correos Electrónicos</h5>
+                            <p class="ms-4">
+                                <strong>General:</strong> info@clinicaamericana.com<br>
+                                <strong>Citas:</strong> citas@clinicaamericana.com<br>
+                                <strong>Emergencias:</strong> urgencias@clinicaamericana.com
+                            </p>
+                        </div>
+
+                        <div class="contact-item mb-4">
+                            <h5>Horarios de Atención</h5>
+                            <p class="ms-4">
+                                <strong>Lunes a Viernes:</strong> 7:00 AM - 8:00 PM<br>
+                                <strong>Sábados:</strong> 8:00 AM - 2:00 PM<br>
+                                <strong>Domingos:</strong> Solo emergencias<br>
+                                <strong>Emergencias:</strong> 24/7 todos los días
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card shadow h-100">
+                    <div class="card-header bg-dark text-white">
+                        <h4>Envíanos un Mensaje</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="formContacto">
+                            <div class="mb-3">
+                                <label class="form-label">Nombre Completo</label>
+                                <input type="text" class="form-control" id="nombreContacto" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="emailContacto" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" id="telefonoContacto" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Asunto</label>
+                                <select class="form-select" id="asuntoContacto" required>
+                                    <option value="">Seleccionar...</option>
+                                    <option value="consulta">Consulta General</option>
+                                    <option value="cita">Agendar Cita</option>
+                                    <option value="queja">Quejas y Sugerencias</option>
+                                    <option value="informacion">Solicitar Información</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="mensajeContacto" rows="5" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100">
+                                Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">Desarrollado por: <strong>Lisandro Meza</strong></p>
+        <p class="mb-0">Fecha: <strong id="fechaActual"></strong></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let modoOscuro = localStorage.getItem('modoOscuro') === 'true';
+        const btnModoOscuro = document.getElementById('btnModoOscuro');
+        const fechaActual = document.getElementById('fechaActual');
+
+        function mostrarFechaActual() {
+            const hoy = new Date();
+            const opciones = { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            };
+            fechaActual.textContent = hoy.toLocaleDateString('es-ES', opciones);
+        }
+
+        function aplicarModoOscuro() {
+            if (modoOscuro) {
+                document.body.classList.add('dark-mode');
+                btnModoOscuro.textContent = '☀️';
+            } else {
+                document.body.classList.remove('dark-mode');
+                btnModoOscuro.textContent = '🌙';
+            }
+        }
+
+        btnModoOscuro.addEventListener('click', function() {
+            modoOscuro = !modoOscuro;
+            localStorage.setItem('modoOscuro', modoOscuro);
+            aplicarModoOscuro();
+        });
+
+        document.getElementById('formContacto').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nombre = document.getElementById('nombreContacto').value;
+            const email = document.getElementById('emailContacto').value;
+            const telefono = document.getElementById('telefonoContacto').value;
+            const asunto = document.getElementById('asuntoContacto').value;
+            const mensaje = document.getElementById('mensajeContacto').value;
+            
+            alert(`Gracias por contactarnos, ${nombre}!\n\nTu mensaje ha sido enviado exitosamente.\nNos pondremos en contacto contigo pronto.`);
+            
+            this.reset();
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            mostrarFechaActual();
+            aplicarModoOscuro();
+        });
+    </script>
+
+</body>
+</html>
