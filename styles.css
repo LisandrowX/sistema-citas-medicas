@@ -238,6 +238,63 @@ body.dark-mode .table td {
     background-color: transparent !important;
 }
 
+@media (max-width: 991px) {
+    .navbar-collapse {
+        text-align: center;
+    }
+    
+    .navbar-nav {
+        align-items: center;
+    }
+    
+    .nav-item {
+        text-align: center;
+    }
+    
+    .nav-link {
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #343a40;
+        padding: 1rem;
+        z-index: 1000;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        text-align: center;
+    }
+    
+    .navbar-nav {
+        align-items: center;
+        margin: 0 auto;
+    }
+    
+    .nav-item {
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+    
+    .nav-link {
+        text-align: center;
+        display: block;
+    }
+}
+
+body.dark-mode .navbar-collapse {
+    background-color: #1a1a1a !important;
+}
+
+.navbar {
+    position: relative;
+}
+
 
 
 
