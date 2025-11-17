@@ -287,14 +287,21 @@ body.dark-mode .table td {
     }
 }
 
-body.dark-mode .navbar-collapse {
-    background-color: #1a1a1a !important;
-}
-
 .navbar {
     position: relative;
 }
 
+.card-header.bg-dark {
+    background-color: #1A1A1A !important;
+}
+
+* {
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease !important;
+}
+
+body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
 
 
 
