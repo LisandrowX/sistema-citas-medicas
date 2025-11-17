@@ -140,3 +140,17 @@ document.addEventListener('DOMContentLoaded', function() {
     establecerFechaMinima();
     cargarCitas();
 });
+
+let modoOscuro = false;
+
+btnModoOscuro.addEventListener('click', function() {
+    modoOscuro = !modoOscuro;
+    
+    if (modoOscuro) {
+        document.body.classList.add('dark-mode');
+        btnModoOscuro.textContent = '☀️';
+    } else {
+        document.body.classList.remove('dark-mode');
+        btnModoOscuro.textContent = '🌙';
+    }
+});

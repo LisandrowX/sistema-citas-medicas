@@ -1,11 +1,10 @@
 body {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 
 header h1 {
@@ -108,12 +107,13 @@ header {
 }
 
 footer {
+    background: linear-gradient(135deg, #6a60fd 0%, #9e9cfd 100%) !important;
     margin-top: 50px;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 footer strong {
-    color: #0d6efd;
+    color: #ffffff;
 }
 
 @keyframes fadeIn {
@@ -166,4 +166,78 @@ footer strong {
     background-color: #0d6efd !important;
     color: white !important;
 }
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode .card {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+}
+
+body.dark-mode .table {
+    color: #e0e0e0;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #495057;
+}
+
+body.dark-mode .form-label {
+    color: #e4d9d9;
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    background-color: #202020;
+    color: #ffffff;
+    border-color: #5c5c5c;
+}
+
+body.dark-mode .form-control:focus,
+body.dark-mode .form-select:focus {
+    background-color: #1A1A1A;
+    color: #ffffff;
+    border-color: #0d6efd;
+}
+
+body.dark-mode .card .card-body .table-responsive .table,
+body.dark-mode .table.table-striped.table-hover {
+    background-color: #2d2d2d !important;
+}
+
+body.dark-mode .table * {
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .table thead.table-primary {
+    background: #1e3a8a !important;
+}
+
+body.dark-mode .table thead.table-primary th {
+    background: #1a1a1a !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .table tbody tr {
+    background-color: #374151 !important;
+}
+
+body.dark-mode .table tbody tr:nth-of-type(odd) {
+    background-color: #202020 !important;
+}
+
+body.dark-mode .table tbody tr:hover {
+    background-color: #1a1a1a !important;
+}
+
+body.dark-mode .table td {
+    background-color: transparent !important;
+}
+
+
+
 
