@@ -1,9 +1,10 @@
 body {
     font-family: 'Inter', sans-serif;
+    font-weight: 400;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
 }
 
@@ -112,7 +113,7 @@ footer {
 }
 
 footer strong {
-    color: #ffc107;
+    color: #0d6efd;
 }
 
 @keyframes fadeIn {
@@ -160,3 +161,9 @@ footer strong {
 .navbar-nav {
     margin: 0 auto;
 }
+
+.btn-agendar:hover {
+    background-color: #0d6efd !important;
+    color: white !important;
+}
+

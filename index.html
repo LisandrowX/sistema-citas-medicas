@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -30,6 +30,9 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#acerca">Acerca de</a>
@@ -115,8 +118,16 @@
                                     <input type="text" class="form-control" id="nombre" required>
                                 </div>
                                 <div class="col-md-6">
+                                    <label class="form-label">Cédula</label>
+                                    <input type="text" class="form-control" id="cedula" required>
+                                </div>
+                                <div class="col-md-6">
                                     <label class="form-label">Teléfono</label>
                                     <input type="tel" class="form-control" id="telefono" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Correo</label>
+                                    <input type="text" class="form-control" id="correo" required>
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -135,10 +146,16 @@
                                         <option value="Dr. García">Dr. García</option>
                                         <option value="Dra. Martínez">Dra. Martínez</option>
                                         <option value="Dr. López">Dr. López</option>
+                                        <option value="Dra. Daza">Dra. Daza</option>
+                                        <option value="Dr. Perez">Dr. Perez</option>
                                     </select>
                                 </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Motivo de la Consulta</label>
+                                    <textarea class="form-control" id="motivo" rows="3" required></textarea>
+                                </div>
                             </div>
-                            <button type="submit" class="btn btn-success w-100">Agendar Cita</button>
+                            <button type="submit" class="btn btn-primary w-100 btn-agendar">Agendar Cita</button>
                         </form>
                     </div>
                 </div>
@@ -158,16 +175,19 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Paciente</th>
+                                        <th>Cédula</th>
                                         <th>Teléfono</th>
+                                        <th>Correo</th>
                                         <th>Doctor</th>
                                         <th>Fecha</th>
                                         <th>Hora</th>
+                                        <th>Estado</th>
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody id="tablaCitas">
                                     <tr>
-                                        <td colspan="7" class="text-center text-muted">No hay citas registradas</td>
+                                        <td colspan="10" class="text-center text-muted">No hay citas registradas</td>
                                     </tr>
                                 </tbody>
                             </table>

@@ -2,7 +2,6 @@ let citas = [];
 let contador = 1;
 
 const btnAlerta = document.getElementById('btnAlerta');
-const btnModoOscuro = document.getElementById('btnModoOscuro');
 const formCita = document.getElementById('formCita');
 const tablaCitas = document.getElementById('tablaCitas');
 const fechaActual = document.getElementById('fechaActual');
@@ -25,18 +24,25 @@ formCita.addEventListener('submit', function(e) {
     e.preventDefault();
     
     const nombre = document.getElementById('nombre').value;
+    const cedula = document.getElementById('cedula').value;
     const telefono = document.getElementById('telefono').value;
+    const correo = document.getElementById('correo').value;
     const fecha = document.getElementById('fecha').value;
     const hora = document.getElementById('hora').value;
     const doctor = document.getElementById('doctor').value;
+    const motivo = document.getElementById('motivo').value;
     
     const nuevaCita = {
         id: contador++,
         nombre: nombre,
+        cedula: cedula,
         telefono: telefono,
+        correo: correo,
         fecha: fecha,
         hora: hora,
-        doctor: doctor
+        doctor: doctor,
+        motivo: motivo,
+        estado: "Pendiente"
     };
     
     citas.push(nuevaCita);
@@ -56,7 +62,7 @@ function mostrarCitas() {
     if (citas.length === 0) {
         tablaCitas.innerHTML = `
             <tr>
-                <td colspan="7" class="text-center text-muted">No hay citas registradas</td>
+                <td colspan="10" class="text-center text-muted">No hay citas registradas</td>
             </tr>
         `;
         return;
@@ -66,11 +72,14 @@ function mostrarCitas() {
         const fila = document.createElement('tr');
         fila.innerHTML = `
             <td>${index + 1}</td>
-            <td><strong>${cita.nombre}</strong></td>
+            <td>${cita.nombre}</td>
+            <td>${cita.cedula}</td>
             <td>${cita.telefono}</td>
+            <td>${cita.correo}</td>
             <td>${cita.doctor}</td>
             <td>${formatearFecha(cita.fecha)}</td>
             <td>${cita.hora}</td>
+            <td>${cita.estado}</td>
             <td>
                 <button class="btn btn-danger btn-sm" onclick="eliminarCita(${cita.id})">
                     Eliminar
