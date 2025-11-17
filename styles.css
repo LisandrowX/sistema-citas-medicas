@@ -39,7 +39,7 @@ header h1 {
 }
 
 header {
-    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    background: linear-gradient(135deg, #6a60fd 0%, #9e9cfd 100%);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -65,7 +65,7 @@ header {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    background-color: #157347;
     border: none;
 }
 
@@ -75,7 +75,7 @@ header {
 }
 
 .table thead {
-    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    background: linear-gradient(135deg, #6a60fd 0%, #9e9cfd 100%);
     color: white;
 }
 
